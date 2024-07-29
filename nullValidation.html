@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        button{
+            margin-top: 10%;
+        }
+    </style>
+</head>
+<body>
+    <p><b>Create Div</b></p>
+    <form  action="./secondPage.html" onsubmit="return Validation()" id="form">
+        <p>Enter Name</p><br>
+        <input type="text"
+               placeholder="Enter Your Name"
+               id="name"
+               ><br>
+        <p>Enter Rollno</p><br>
+        <input type="number"
+               placeholder="Rollno"
+               id="Rollno"
+               ><br>
+        <button id="btnCreate" type="submit">Sumbit</button>
+    </form>
+
+    <script>
+        function Validation(){
+            var name = document.getElementById('name').value;
+            var Rollno = document.getElementById('Rollno').value;
+            if(name!=null&& Rollno!="") return true;
+            else return false;
+        }
+    </script>
+</body>
+</html>
